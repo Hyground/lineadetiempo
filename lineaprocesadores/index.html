@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Infografía interactiva sobre la evolución de los microprocesadores." />
+  <title>Evolución de los microprocesadores</title>
+  <link rel="icon" type="image/png" href="Perfil.png" />
+  <link rel="apple-touch-icon" href="Perfil.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fredoka:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-blobs" aria-hidden="true"><i class="blob blob-one"></i><i class="blob blob-two"></i><i class="blob blob-three"></i></div>
+  <div class="sparkles" aria-hidden="true"><span>✦</span><span>✧</span><span>✦</span><span>•</span><span>✧</span></div>
+
+  <header class="hero">
+    <div class="brand" tabindex="0" aria-label="Powered by Hygroundd">
+      <img class="avatar" src="Perfil.png" alt="Avatar de Hygroundd" />
+      <span>Powered by <b>Hygroundd</b></span>
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">INFOGRAFÍA TECNOLÓGICA</p>
+      <h1>EVOLUCIÓN DE LOS <span>MICROPROCESADORES</span></h1>
+      <p class="subtitle">De 4 bits a la era de los procesadores modernos</p>
+    </div>
+    <div class="header-ornament" aria-hidden="true">⌁</div>
+  </header>
+
+  <main>
+    <section class="timeline-section" aria-labelledby="timeline-title">
+      <div class="section-topline">
+        <div><p class="section-kicker">1971 — HOY</p><h2 id="timeline-title">Un viaje a través del silicio</h2></div>
+        <label class="order-control">Ordenar por
+          <select id="orderSelect" aria-label="Cambiar orden de los procesadores">
+            <option value="original">Diseño original</option>
+            <option value="chronological">Orden cronológico</option>
+          </select>
+        </label>
+      </div>
+      <p class="hover-hint">Mantén el cursor 2 segundos sobre una tarjeta para conocer su historia <span>✦</span></p>
+      <div class="timeline-wrap">
+        <div class="timeline-line" aria-hidden="true"></div>
+        <div id="processorGrid" class="processor-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <aside class="chiplet-note" aria-label="Nota sobre los procesadores modernos"><span>✦</span><p>En los procesadores modernos con diseño <b>chiplet</b>, el número exacto de transistores puede variar. Se refiere a miles de millones en total.</p></aside>
+
+    <section class="closing" aria-label="Reflexión final">
+      <div class="micro-icon" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p>Cada generación, un salto hacia un futuro más potente.</p>
+      <span aria-hidden="true">✦</span>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-mark">⌘</div>
+    <div><strong>Carlos Daniel Figueroa Salazar</strong><span>Carnet: 0904-23-8889</span></div>
+    <p>© 2026 Carlos Daniel Figueroa Salazar<br>Todos los derechos reservados.</p>
+    <div class="footer-powered"><img src="Perfil.png" alt="" /> Powered by Hygroundd</div>
+  </footer>
+
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="modal-panel">
+      <button class="modal-close" type="button" data-close-modal aria-label="Cerrar información detallada">× <span>Cerrar</span></button>
+      <div id="modalContent"></div>
+    </article>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
